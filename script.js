@@ -30,3 +30,4 @@ function getSelectedFood() {
     const selectedFood = Array.from(foodCheckboxes).map(checkbox => checkbox.value);
     return selectedFood;
 }
+
