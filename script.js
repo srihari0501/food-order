@@ -4,7 +4,7 @@ function submitForm() {
     const lastName = document.getElementById('last-name').value;
     const address = document.getElementById('address').value;
     const pincode = document.getElementById('pincode').value;
-    const gender = document.getElementById('gender').value;
+    const gender = getGender();
     const food = getSelectedFood();
     const state = document.getElementById('state').value;
     const country = document.getElementById('country').value;
@@ -40,3 +40,9 @@ function getSelectedFood() {
     return selectedFood;
 }
 
+function getGender() {
+    const genderCheckboxes = document.querySelectorAll('input[type="radio"]:checked');
+    const selectedGender = Array.from(genderCheckboxes).map(checkbox => checkbox.value);
+
+    return selectedGender;
+}
