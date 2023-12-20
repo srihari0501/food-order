@@ -1,13 +1,15 @@
 function submitForm() {
 
-    const firstName = document.getElementById('firstName').value;
-    const lastName = document.getElementById('lastName').value;
+    const firstName = document.getElementById('first-name').value;
+    const lastName = document.getElementById('last-name').value;
     const address = document.getElementById('address').value;
     const pincode = document.getElementById('pincode').value;
     const gender = document.getElementById('gender').value;
     const food = getSelectedFood();
     const state = document.getElementById('state').value;
     const country = document.getElementById('country').value;
+
+
 
  
     const tableBody = document.getElementById('dataTableBody');
@@ -28,6 +30,13 @@ function submitForm() {
 function getSelectedFood() {
     const foodCheckboxes = document.querySelectorAll('input[type="checkbox"]:checked');
     const selectedFood = Array.from(foodCheckboxes).map(checkbox => checkbox.value);
+
+        
+    if (foodCheckboxes.length < 2) {
+        alert("Please select exactly two food items.");
+        return;
+    }
+
     return selectedFood;
 }
 
