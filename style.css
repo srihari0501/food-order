@@ -1,11 +1,23 @@
-
 .table{
     border: 3px solid black;
     margin-top: 23px;
 }
-h3{
+h1,p{
     text-align: center;
 }
-.container{
-    background-image: linear-gradient(to top, rgba(235, 220, 220, 0.458),rgba(188, 186, 186, 0.915), rgba(245, 245, 245, 0.816));
+
+body {
+    background-image: url('https://img.freepik.com/free-photo/homemade-delicious-sandwiches-black-board-dark-gray-blurred-surface-vertical-view_179666-42623.jpg?size=626&ext=jpg&ga=GA1.1.1564686621.1702918120&semt=ais');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
+
+.container {
+    backdrop-filter: blur(13px) saturate(169%);
+    -webkit-backdrop-filter: blur(13px) saturate(169%);
+    background-color: rgba(146, 146, 152, 0.38);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.125);
+}
+
